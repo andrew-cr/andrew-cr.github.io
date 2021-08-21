@@ -1,7 +1,7 @@
 ---
 title: "A Gradient Based Strategy for Hamiltonian Monte Carlo Hyperparameter Optimization"
 collection: publications
-permalink: /publication/hmc
+# permalink: /publication/hmc
 # excerpt: 'A Gradient Based Strategy for Hamiltonian Monte Carlo Hyperparameter Optimization'
 date: 2021-07-01
 venue: 'International Conference on Machine Learning'

@@ -81,7 +81,7 @@ analytics:
 # Site Author
 author:
   name             : "Andrew Campbell"
-  avatar           : "photo_square.jpg"
+  avatar           : "photo_crop.jpg"
   bio              : "Machine Learning PhD Student - Dept. Statistics, University of Oxford"
   location         : #"Oxford"
   employer         :

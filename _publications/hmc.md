@@ -1,11 +1,14 @@
 ---
 title: "A Gradient Based Strategy for Hamiltonian Monte Carlo Hyperparameter Optimization"
 collection: publications
+author: Campbell. A*, Chen. W*, Stimper. V*, Hernández-Lobato. JM, Zhang. Y
+link: http://proceedings.mlr.press/v139/campbell21a/campbell21a.pdf
+img: https://www.boredpanda.com/blog/wp-content/uploads/2017/04/cute-dog-shiba-inu-ryuji-japan-57.jpg
+alt: A cute shiba
 # permalink: /publication/hmc
 # excerpt: 'A Gradient Based Strategy for Hamiltonian Monte Carlo Hyperparameter Optimization'
 date: 2021-07-01
-venue: 'International Conference on Machine Learning'
-paperurl: 'http://proceedings.mlr.press/v139/campbell21a/campbell21a.pdf'
+venue: 'ICML'
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 

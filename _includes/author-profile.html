@@ -17,6 +17,11 @@
   <div class="author__content">
     <h3 class="author__name">{{ author.name }}</h3>
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
+    {% if author.email %}
+      <p class="author__bio"> {{author.email}} </p>
+      <!--<li><a href="mailto:{{ author.email }}"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].email_label | default: "Email" }}</a></li>-->
+      <!--<a class="author__bio" href="mailto:{{ author.email }}">{{ author.email }}</a>-->
+    {% endif %}
   </div>
 
   <div class="author__urls-wrapper">

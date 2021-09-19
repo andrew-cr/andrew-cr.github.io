@@ -81,13 +81,13 @@ analytics:
 # Site Author
 author:
   name             : "Andrew Campbell"
-  avatar           : "profile.png"
+  avatar           : "photo_square.jpg"
   bio              : "Machine Learning PhD Student - Dept. Statistics, University of Oxford"
-  location         : "Oxford"
+  location         : #"Oxford"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.com/citations?user=_rimRBgAAAAJ"
-  email            :
+  email            : "campbell [at] stats.ox.ac.uk"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

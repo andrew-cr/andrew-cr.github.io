@@ -13,3 +13,5 @@ I am a second year PhD student in the Department of Statistics at the University
 I have worked on gradient based hyperparameter optimization through exploring the links between variational inference and Hamiltonian Monte Carlo. I have also worked on novel methods for online inference in sequential state space models with applications to tracking and extracting meaning from long video sequences.  
 
 Before coming to Oxford, I completed a Masters in Information Engineering at the University of Cambridge where I was supervised by <a href='https://jmhl.org'>José Miguel Hernández-Lobato</a>.
+
+ <a href='https://andrew-cr.github.io/year-archive/'>I have written about some of my research in blog form here</a>

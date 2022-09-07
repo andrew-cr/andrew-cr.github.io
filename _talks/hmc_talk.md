@@ -9,4 +9,3 @@ link: https://slideslive.com/38959712
 # location: "San Francisco, California"
 ---
 
-Short presentation on our work on HMC hyperparameter optimization.

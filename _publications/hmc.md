@@ -6,6 +6,7 @@ link: http://proceedings.mlr.press/v139/campbell21a/campbell21a.pdf
 # permalink: /publication/hmc
 # excerpt: 'A Gradient Based Strategy for Hamiltonian Monte Carlo Hyperparameter Optimization'
 venue: 'ICML 2021'
+order: 3
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 

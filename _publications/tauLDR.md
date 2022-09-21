@@ -3,7 +3,7 @@ title: "A Continuous Time Framework for Discrete Denoising Models"
 collection: publications
 author: Campbell. A, Benton. J, De Bortoli. V, Rainforth. T, Deligiannidis. G, Doucet. A
 link: https://arxiv.org/abs/2205.14987
-venue: 'Preprint'
+venue: 'NeurIPS 2022'
 order: 1
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---

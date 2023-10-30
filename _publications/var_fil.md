@@ -4,7 +4,7 @@ collection: publications
 author: Campbell. A*, Shi. Y*, Rainforth. T, Doucet. A
 link: https://arxiv.org/abs/2110.13549
 venue: 'NeurIPS 2021 (Oral)'
-order: 2
+order: 3
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 

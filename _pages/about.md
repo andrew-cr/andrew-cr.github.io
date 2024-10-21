@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a fourth year PhD student in the Department of Statistics at the University of Oxford. My supervisors are <a href='https://www.stats.ox.ac.uk/~doucet/'>Arnaud Doucet </a> and <a href='https://www.robots.ox.ac.uk/~twgr/'>Tom Rainforth</a>. My research interests include generative models, variational inference and MCMC.
+I am a fourth year PhD student in the Department of Statistics at the University of Oxford. My supervisors are <a href='https://www.stats.ox.ac.uk/~doucet/'>Arnaud Doucet </a> and <a href='https://www.robots.ox.ac.uk/~twgr/'>Tom Rainforth</a>.
 
 During my PhD, I have worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I have applied these methods to scientific data including molecules and proteins.
 

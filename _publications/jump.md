@@ -4,7 +4,7 @@ collection: publications
 author: Campbell. A, Harvey. W, Weilbach. C, De Bortoli. V, Rainforth. T, Doucet. A
 link: https://arxiv.org/abs/2305.16261
 venue: 'NeurIPS 2023 (Spotlight)'
-order: 1
+order: 2
 # citation: 'Your Name, You. (2009). &quot;Paper Title Number 1.&quot; <i>Journal 1</i>. 1(1).'
 ---
 

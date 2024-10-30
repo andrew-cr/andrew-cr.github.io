@@ -13,5 +13,3 @@ I am a fourth year PhD student in the Department of Statistics at the University
 During my PhD, I have worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I have applied these methods to scientific data including molecules and proteins.
 
 Before coming to Oxford, I completed a Masters in Information Engineering at the University of Cambridge where I was supervised by <a href='https://jmhl.org'>José Miguel Hernández-Lobato</a>.
-
- <a href='https://andrew-cr.github.io/year-archive/'>I have written about some of my research in blog form here</a>

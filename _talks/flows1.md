@@ -1,5 +1,5 @@
 ---
-title: "Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design""
+title: "Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design"
 collection: talks
 type: "Reading Group"
 # permalink: /talks/2012-03-01-talk-1

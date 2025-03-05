@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en-us"
+  dir="ltr">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+
+
+<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+
+<meta name="description" content=""/>
+
+
+
+<title>
+    
+    An Introduction to Continuous Time Markov Chain Path Measures | Andrew Campbell
+    
+</title>
+
+<link rel="canonical" href="http://localhost:1313/posts/ctmc_path_measures/"/>
+
+<meta property="og:url" content="http://localhost:1313/posts/ctmc_path_measures/">
+  <meta property="og:site_name" content="Andrew Campbell">
+  <meta property="og:title" content="An Introduction to Continuous Time Markov Chain Path Measures">
+  <meta property="og:description" content="How to think about densities on the path space and the Radon-Nikodym derivative">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-03-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-03-05T00:00:00+00:00">
+    <meta property="article:tag" content="CTMC">
+    <meta property="article:tag" content="Path Measure">
+    <meta property="article:tag" content="Measure Theory">
+    <meta property="article:tag" content="Radon Nikodym">
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/assets/combined.min.959a55de7a1e6b17e5d9351e7e745fcffed57547f52681ad863899a51be52b06.css" media="all">
+
+
+
+
+
+</head>
+
+
+
+
+
+
+
+<body class="light">
+
+  <div class="content">
+    <header>
+      
+
+<div class="header">
+
+    
+
+    
+
+    <div class="header-container">
+        <h1 class="header-title">
+            <a href="http://localhost:1313/">Andrew Campbell</a>
+        </h1>
+
+        
+    </div>
+
+    <div class="flex">
+        
+
+        
+        
+      
+        <p class="small ">
+            <a href="/" >
+                /home
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/posts" >
+                /posts
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/publications" >
+                /publications
+            </a>
+        </p>
+        
+      
+        <p class="small ">
+            <a href="/talks" >
+                /talks
+            </a>
+        </p>
+        
+        
+    </div>
+
+    
+
+</div>
+
+    </header>
+
+    <main class="main">
+      
+
+
+
+
+
+<div class="breadcrumbs">
+    
+    <a href="/">Home</a>
+    <span class="breadcrumbs-separator"> / </span>
+    
+    <a href="/posts/">Posts</a>
+    <span class="breadcrumbs-separator"> / </span>
+    
+    <a href="/posts/ctmc_path_measures/">An Introduction to Continuous Time Markov Chain Path Measures</a>
+</div>
+
+
+
+<div >
+
+  <div class="single-intro-container">
+
+    
+
+    <h1 class="single-title">An Introduction to Continuous Time Markov Chain Path Measures</h1>
+    
+    <p class="single-summary">How to think about densities on the path space and the Radon-Nikodym derivative</p>
+    
+
+    
+
+    <p class="single-readtime">
+      
+      
+      
+      <time datetime="2025-03-05T00:00:00&#43;00:00">March 5, 2025</time>
+      
+
+      
+    </p>
+
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  <div class="single-content">
+    <p>In this post we will look at path space measures over continuous time Markov chain (CTMC) paths. This description is taken from a paper I co-authored <a href="https://arxiv.org/abs/2402.04997">arXiv 2402.04997</a> Appendix C which follows the exposition in <em>Stochastic Processes: From Applications to Theory</em> by Del Moral and Penev Chapter 18. This is a topic I found difficult to find an intuitive explanation of when I first started and so I hope this post can be useful to others.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+<figure class="">
+
+    <div>
+        <img loading="lazy" alt="A single CTMC trajectory" src="/images/ctmc.png" >
+    </div>
+
+    
+</figure>
+</p>
+<p>A path of a CTMC is a single trajectory from time \(0\) to time \(t\). The trajectory is a function \(\omega : s \in [0, t] \mapsto \omega_s \in \{1, \dots , S \}\) that is everywhere right continuous and has left limits everywhere (also known as càdlàg paths). Intuitively, it is a function that takes in a time variable and outputs the position of the particle following the trajectory at that time. The càdlàg condition in our case states that at jump time \(\tau\) we have \(\omega_\tau\) taking the new jumped to value and \(\omega_{\tau}^- := \lim_{s \uparrow \tau} \omega_s\) being the previous value before the jump.</p>
+\[
+\begin{aligned}
+    \mathbb{P}(W \in \mathrm{d} \omega) := \mathbb{P} \left( W_0 \in \mathrm{d} \omega_{0}, (T_1, W_{T_1}) \in \mathrm{d} (t_1, \omega_{t_1}), \dots (T_n, W_{T_n}) \in \mathrm{d} (t_n, \omega_{t_n}), T_{n+1} \geq t \right)
+\end{aligned}
+\]<p>
+where \(\mathrm{d} \omega_{t_n}\) and \(\mathrm{d} t_n\) denote infinitesimal neighborhoods around the points \(\omega_{t_n} \in \{1, \dots, S \}\) and \(t_n \in [0, t]\). This is the same sense in which a probability density function assigns probabilities to the infinitesimal neighborhood around a continuous valued variable.</p>
+<p>Our goal is to find an expression for \(\mathbb{P}(W \in \mathrm{d} \omega) \) in terms of known quantities that describe the CTMC i.e. the rate matrix. We can start by splitting \(\mathbb{P}(W \in \mathrm{d} \omega) \) into a product of conditional factors</p>
+\[
+\begin{aligned}
+    \mathbb{P}(W \in \mathrm{d} \omega) = &\mathbb{P}(W_0 \in \mathrm{d} \omega_0) \mathbb{P}((T_1, W_{T_1} \in \mathrm{d} (t_1, \omega_{t_1}) | W_0) \times \dots \\
+    &\times \mathbb{P}((T_n, W_{T_n}) \in \mathrm{d} (t_n, \omega_{t_n}) | W_0, (T_1, W_{T_1}), \dots, (T_{n-1}, W_{T_{n-1}})) \\
+    &\times \mathbb{P}(T_{n+1} \geq t |  W_0, (T_1, W_{T_1}), \dots, (T_{n}, W_{T_{n}}))
+\end{aligned}
+\]\[
+\begin{align}
+    \mathbb{P}(W \in \mathrm{d} \omega) = &\mathbb{P}(W_0 \in \mathrm{d} \omega_0) \times \label{factor1} \\
+    &\mathbb{P}(T_1 \in \mathrm{d} t_1 | W_0) \times \label{factor2} \\
+    &\mathbb{P}(W_{T_1} \in \mathrm{d} \omega_{t_1} | W_0, T_1, W^{-}_{T_1} = W_0) \times \label{factor3}\\
+    &\dots \times \\
+    &\mathbb{P}(T_n \in \mathrm{d} t_n | W_0, (T_1, W_{T_1}), \dots, (T_{n-1}, W_{T_{n-1}})) \times \\
+    &\mathbb{P}(W_{T_n} \in \mathrm{d} \omega_{t_n} | W_0, (T_1, W_{T_1}), \dots, T_n, W^{-}_{T_{n}} = W_{T_{n-1}}) \times \\
+    &\mathbb{P}(T_{n+1} \geq t |  W_0, (T_1, W_{T_1}), \dots, (T_{n}, W_{T_{n}})) \label{factor4}
+\end{align}
+\]<p>We have split \(\mathbb{P}(W \in \mathrm{d} \omega) \) into individual probabilities for all the events that make a \(W \) path unique. We consider paths of time length \( t \). During this time we index all the jumps as \( 1 \) to \( n \). It starts with the probability that the initial state is in a certain position (Eq. \ref{factor1}). We then have the probability that the first waiting time is in local neighborhood \( \mathrm{d} t_1 \) (Eq. \ref{factor2}). This is followed by the probability that the particle jumps to new state \(W_{T_1} \) that is in local neighborhood \( \mathrm{d} \omega_{t_1}\) (Eq. \ref{factor3}). This is conditioned on the fact that the left limit \( W_{T_1}^-\) is still in the previous state \(W_0 \) because we know the jump time is \(T_1\). These factors are repeated for all times up to \(T_n \) with the conditioning growing as more history of the CTMC path is built up.</p>
+<p>The final aspect of a CTMC path \(W \) that we need to assign probability to is that if we are looking at paths of time length \( t\), then we need particle to wait in the final position until the end of time window. Otherwise, if it jumped before reaching time \( t \), then this wouldn&rsquo;t be the final state by definition! We therefore need to include the probability that the particle will wait in this final position (Eq. \ref{factor4}).</p>
+<p>For discrete state spaces \( \mathbb{P}(W_{T_n} \in \mathrm{d} \omega_{t_n}) \) is simply \(\mathbb{P}(W_{T_n} = \omega_{t_n})\) because we use the discrete measure. We also note that for CTMCs, the markov property ensures the probability of a jump does not depend on the entire history but only on the previous state. This gives</p>
+\[
+\begin{aligned}
+    \mathbb{P}(W \in \mathrm{d} \omega) = &\mathbb{P}(W_0 = \omega_0) \times \\
+    &\mathbb{P}(T_1 \in \mathrm{d} t_1 | W_0) \times \\
+    &\mathbb{P}(W_{T_1} = \omega_{t_1} | T_1, W^{-}_{T_1} = W_0) \times\\
+    &\dots \times \\
+    &\mathbb{P}(T_n \in \mathrm{d} t_n | T_{n-1}, W_{T_{n-1}})   \times \\
+    &\mathbb{P}(W_{T_n} = \omega_{t_n} | T_n, W^-_{T_n} = W_{T_{n-1}}) \times \\
+    &\mathbb{P}(T_{n+1} \geq t |  T_n, W_{T_{n}})
+\end{aligned}
+\]<p>In these factors, we still need to condition on the previous jump time because we need to know a jump occurs. It is now left to us to work out the forms for each of these factors.</p>
+<p>We start by reminding ourselves of the definition of a CTMC with rate matrix \(R_t\). The CTMC waits in the current state for an amount of time determined by an exponential random variable with time-inhomogeneous rate \(R_t(W_t) := \sum_{k \neq W_t} R_t(W_t, k)\), see <a href="#1">[1]</a> and <a href="#2">[2]</a> Appendix A for more details. After the wait time is finished, the CTMC jumps to a next chosen state where the jump distribution is</p>
+\[
+\begin{equation*}
+    \mathbb{P}(W_{t_k} | W_{t_k}^-) = \frac{R_t(W_{t_k}^-, W_{t_k}) \left(1 - \delta \{W_{t_k}^- = W_{t_k} \} \right)   } { R_t(W_{t_k}^-) }
+\end{equation*}
+\]<p>From this definition, we immediately get that</p>
+\[
+\begin{equation*}
+    \mathbb{P}(W_{T_n} = \omega_{t_n} | T_n, W^-_{T_n} = W_{T_{n-1}}) = \frac{R_{T_n}(W_{T_n}^-, W_{T_n})  } { R_{T_n}(W_{T_n}^-) }
+\end{equation*}
+\]<p>Note that we automatically have \(\delta \{ W_{T_n}^- = W_{T_n} \} = 0\) because we condition on the fact a jump occurs at \(T_n \) and a jump necessitates a change in value by definition.</p>
+<p>Now we can work on the time related quantities. For an exponential random variable with time-inhomogeneous rate, the cumulative distribution function is given by</p>
+\[
+\begin{equation*}
+    \mathbb{P}(T < t) = 1 - \exp \left( - \int_{s=0}^{s=t} R_s(W_s^-) \mathrm{d} s \right) 
+\end{equation*}
+\]<p>Therefore, the probability density function, \(p(t) = \frac{\partial}{\partial t} \mathbb{P}(T < t)\), is</p>
+\[
+\begin{equation*}
+    p(t) =  \exp \left( - \int_{s=0}^{s=t} R_s(W_s^-) \mathrm{d} s \right)R_t(W_t^-)
+\end{equation*}
+\]<p>From this we get that</p>
+\[
+    \mathbb{P}(T_n \in \mathrm{d} t_n | T_{n-1}, W_{T_{n-1}}) = \exp \left( - \int_{s=T_{n-1}}^{s=T_n} R_s(W_s^-) \mathrm{d} s  \right) R_{T_n}(W_{T_n}^-) \mathrm{d} t_n
+\]<p>We finally note that if we wish to know \(\mathbb{P}(T_k < t | T_{k-1})\) i.e. the probability that the \(k\)-th jump time is less than \(t\) given we know the \(k-1\)-th jump time, then this is just an exponential random variable started at time \(T_{k-1}\) when the previous jump occurred,</p>
+\[
+\begin{equation*}
+    \mathbb{P}(T_k < t | T_{k-1}) = 1 - \exp \left( - \int_{s=T_{k-1}}^{s=t} R_s(W_s^-) \mathrm{d} s \right)
+\end{equation*}
+\]<p>
+In other words, we simply start a new exponential timer once the previous jump occurs and the same equation carries through. Therefore we have</p>
+\[
+    \mathbb{P}(T_{n+1} \geq t |  T_n, W_{T_{n}}) = \exp \left( - \int_{s=T_{n}}^{s=t} R_s(W_s^-) \mathrm{d} s \right)
+\]<p>We now substitute all these factors into our equation for \(\mathbb{P}( W \in \mathrm{d} \omega )\).</p>
+\[
+\begin{aligned}
+    \mathbb{P}(W \in \mathrm{d} \omega) =& p_0(W_0) \times \\
+    & \exp \left( - \int_{s=0}^{s=T_1} R_s(W_s^-) \mathrm{d} s \right) R_{T_1}(W_{T_1}^-) \mathrm{d} t_1 \times \\
+    & \frac{R_{T_1}(W_{T_1}^-, W_{T_1})}{R_{T_1}(W_{T_1}^-)} \times \\
+    & \dots \times\\
+    & \exp \left( - \int_{s=T_{n-1}}^{s=T_n} R_s(W_s^-) \mathrm{d} s \right) R_{T_n}(W_{T_n}^-) \mathrm{d} t_n  \times \\
+    & \frac{R_{T_n}(W_{T_n^-}, W_{T_n})}{R_{T_n}(W_{T_n}^-)} \times \\
+    & \exp \left( - \int_{s=T_n}^{s=t} R_s(W_s^-) \mathrm{d} s \right)
+\end{aligned}
+\]<p>where \(p_0(W_0) \) is some initial discrete distribution for the start point of the trajectory. There are a lot of cancellations and combining all the exponential terms, we get</p>
+\[
+\begin{aligned}
+\mathbb{P}(W \in \mathrm{d} \omega) &= p_0(W_0) \exp \left( - \int_{s=0}^{s=t} R_s(W_s^-) \mathrm{d} s\right) \prod_{k=1}^n R_{T_k}(W_{T_k}^-, W_{T_k}) \mathrm{d} t_k\\
+&= p_0(W_0) \exp \left( - \int_{s=0}^{s=t} R_s(W_s^-) \mathrm{d} s\right) \prod_{s:W_s \neq W_s^-} R_{s}(W_{s}^-, W_{s}) \mathrm{d} s
+\end{aligned}
+\]<p>This path space measure is useful for understanding Girsanov&rsquo;s transformation for CTMCs. Girsanov&rsquo;s transformation can be thought of as `importance sampling&rsquo; for path space measures. Specifically, if we take an expectation with respect to path measure \(\mathbb{P}\), \(\mathbb{E}_{\mathbb{P}} \left[f (W) \right]\), then this is equal to \(\mathbb{E}_{\mathbb{Q}} \left[f(W) \frac{\mathrm{d} \mathbb{P}}{\mathrm{d} \mathbb{Q}}(W) \right]\) where \(\mathbb{Q}\) is a different path measure and \(\frac{\mathrm{d} \mathbb{P}}{ \mathrm{d} \mathbb{Q}}\) is known as the Radon-Nikodym derivative. The path measure \(\mathbb{Q}\) will result from considering a CTMC with a different rate matrix to our original measure \(\mathbb{P}\). Girsanov&rsquo;s transformation allows us to calculate the expectation which should have been taken with respect to the CTMC with \(\mathbb{P}\) rate matrix instead with a CTMC with rate matrix corresponding to \(\mathbb{Q}\).</p>
+<p>The Radon-Nikodym derivative in our case has a form that is simply the ratio of \(\mathbb{P}(W \in \mathrm{d} \omega)\) and \(\mathbb{Q}(W \in \mathrm{d} \omega)\). Let \(R_t\), \(p_0\) be the rate matrix and initial distribution defining \(\mathbb{P}\) and let \(R_t'\), \(p'_0\) be the rate matrix and initial distribution defining \(\mathbb{Q}\).</p>
+\[
+\begin{equation*}
+    \frac{\mathrm{d} \mathbb{P}}{\mathrm{d} \mathbb{Q}} (W) = \frac{  p_0(W_0) \exp \left( - \int_{s=0}^{s=t} R_s(W_s^-) \mathrm{d} s \right) \prod_{s: W_s \neq W_s^-} R_s(W_s^-, W_s) } {  p'_0(W_0) \exp \left( - \int_{s=0}^{s=t} R'_s(W_s^-) \mathrm{d} s \right) \prod_{s: W_s \neq W_s^-} R'_s(W_s^-, W_s)   }
+\end{equation*}
+\]<h2 class="heading" id="references">
+  References
+  <a class="anchor" href="#references">#</a>
+</h2>
+<p><a id="1">[1]</a>
+Norris, J. R. Markov chains. <em>Cambridge university press</em>, 1998</p>
+<p><a id="2">[2]</a>
+Campbell, A., Benton, J., De Bortoli, V., Rainforth, T., Deligiannidis, G., and Doucet, A. A continuous time framework for discrete denoising models. <em>Advances in Neural Information Processing Systems</em>, 2022</p>
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+  <div class="back-to-top">
+    <a href="#top">
+      back to top
+    </a>
+  </div>
+  
+
+</div>
+
+
+    </main>
+  </div>
+
+  <footer>
+    
+
+    
+    <p>Powered by
+        <a href="https://gohugo.io/">Hugo</a>
+        and
+        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    </p>
+    
+    
+    
+
+
+  </footer>
+
+  
+  
+
+
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']],                  
+      tags: 'ams',
+    },
+    loader:{
+      load: ['ui/safe']
+    },
+  };
+</script>
+  
+
+</body>
+
+<script src="/js/theme-switch.js"></script>
+<script defer src="/js/copy-code.js"></script>
+</html>

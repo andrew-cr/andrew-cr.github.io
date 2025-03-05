@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Andrew Campbell</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content in Home on Andrew Campbell</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An Introduction to Continuous Time Markov Chain Path Measures</title>
+      <link>http://localhost:1313/posts/ctmc_path_measures/</link>
+      <pubDate>Wed, 05 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/ctmc_path_measures/</guid>
+      <description>How to think about densities on the path space and the Radon-Nikodym derivative</description>
+    </item>
+    <item>
+      <title>Using Reinforcement Learning for Variational Inference</title>
+      <link>http://localhost:1313/posts/rlandvi/</link>
+      <pubDate>Fri, 01 Oct 2021 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/rlandvi/</guid>
+      <description>How to use RL to make inferences in sequential settings.</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/</guid>
+      <description>&lt;p&gt;Please see my &lt;a href=&#34;https://scholar.google.com/citations?user=_rimRBgAAAAJ&amp;amp;hl=en&#34;&gt;google scholar&lt;/a&gt; for an up to date list of my publications.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Talks and Presentations</title>
+      <link>http://localhost:1313/talks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/talks/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;generative-flows-on-discrete-state-spaces-enabling-multimodal-flows-with-applications-to-protein-co-design&#34;&gt;&#xD;&#xA;  &lt;a href=&#34;https://www.youtube.com/watch?v=-L9ekyTI21k&#34;&gt;Generative Flows on Discrete State-Spaces: Enabling Multimodal Flows with Applications to Protein Co-Design&lt;/a&gt;&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#generative-flows-on-discrete-state-spaces-enabling-multimodal-flows-with-applications-to-protein-co-design&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;em&gt;March 22, 2024&lt;/em&gt; - Reading Group, Generative AI in Drug Discovery&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;multiflow-protein-structure-and-sequence-co-generation&#34;&gt;&#xD;&#xA;  &lt;a href=&#34;https://www.youtube.com/watch?v=yzc29vhM2Aw&#34;&gt;Multiflow: protein structure and sequence co-generation&lt;/a&gt;&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#multiflow-protein-structure-and-sequence-co-generation&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;em&gt;February 27, 2024&lt;/em&gt; - Reading Group, Molecular Modeling and Drug Discovery&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;a-continuous-time-framework-for-discrete-denoising-models&#34;&gt;&#xD;&#xA;  &lt;a href=&#34;https://nips.cc/virtual/2022/session/64754&#34;&gt;A Continuous Time Framework for Discrete Denoising Models&lt;/a&gt;&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#a-continuous-time-framework-for-discrete-denoising-models&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;em&gt;December 06, 2022&lt;/em&gt; - Oral Presentation, NeurIPS 2022&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;h3 class=&#34;heading&#34; id=&#34;online-variational-filtering-and-parameter-learning&#34;&gt;&#xD;&#xA;  &lt;a href=&#34;https://slideslive.com/38968051&#34;&gt;Online Variational Filtering and Parameter Learning&lt;/a&gt;&#xD;&#xA;  &lt;a class=&#34;anchor&#34; href=&#34;#online-variational-filtering-and-parameter-learning&#34;&gt;#&lt;/a&gt;&#xD;&#xA;&lt;/h3&gt;&#xD;&#xA;&lt;p&gt;&lt;em&gt;December 06, 2021&lt;/em&gt; - Oral Presentation, NeurIPS 2021&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

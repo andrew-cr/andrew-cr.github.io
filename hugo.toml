@@ -1,0 +1,120 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Andrew Campbell'
+theme = 'typo'
+
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+
+homepageImage = "/images/headshot_mid2.jpg"
+
+
+# Meta description
+description = "Personal website for Andrew Campbell"
+
+# Appearance settings
+theme = 'light'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Bio'
+homeIntroContent = """
+I am a fourth year PhD student in the Department of Statistics at the University of Oxford. My supervisors are Arnaud Doucet and Tom Rainforth.
+
+During my PhD, I have worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I have applied these methods to scientific data including molecules and proteins.
+
+Before coming to Oxford, I completed a Masters in Information Engineering at the University of Cambridge where I was supervised by José Miguel Hernández-Lobato.
+"""
+
+# Collection to display on home
+homeCollectionTitle = 'Posts'
+homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = true
+
+# Social icons
+
+[[params.social]]
+name = "mailto"
+url = "mailto:campbell@stats.ox.ac.uk"
+
+[[params.social]]
+name = "googlescholar"
+url = "https://scholar.google.com/citations?user=_rimRBgAAAAJ"
+
+[[params.social]]
+name = "github"
+url = "https://github.com/andrew-cr"
+
+[[params.social]]
+name = "x"
+url = "https://x.com/AndrewC_ML"
+
+[[params.social]]
+name = "bluesky"
+url = "https://bsky.app/profile/arcampbell.bsky.social"
+
+[[params.social]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/andrew-campbell-542450221/"
+
+
+
+
+# Main menu pages
+[[params.menu]]
+name = "home"
+url = "/"
+
+[[params.menu]]
+name = "posts"
+url = "/posts"
+
+[[params.menu]]
+name = "publications"
+url = "/publications"
+
+[[params.menu]]
+name = "talks"
+url = "/talks"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+[markup.goldmark]
+[markup.goldmark.extensions]
+    [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+        block = [['\[', '\]'], ['$$', '$$']]
+        inline = [['\(', '\)']]
+[markup.goldmark.renderer]
+    unsafe = true
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"
+
+
+
+

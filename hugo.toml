@@ -25,9 +25,11 @@ hideHeader = false
 # Intro on main page, content is markdown
 homeIntroTitle = 'Bio'
 homeIntroContent = """
-I am a fourth year PhD student in the Department of Statistics at the University of Oxford. My supervisors are Arnaud Doucet and Tom Rainforth.
+I am an AI Scientist at Xaira Therapeutics where I work on generative models for antibody design.
 
-During my PhD, I have worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I have applied these methods to scientific data including molecules and proteins.
+Prior to this, I completed my PhD in the Department of Statistics at the University of Oxford. My supervisors were Arnaud Doucet and Tom Rainforth.
+
+During my PhD, I worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I applied these methods to scientific data including molecules and proteins.
 
 Before coming to Oxford, I completed a Masters in Information Engineering at the University of Cambridge where I was supervised by José Miguel Hernández-Lobato.
 """

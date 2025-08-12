@@ -50,7 +50,7 @@ breadcrumbs = true
 
 [[params.social]]
 name = "mailto"
-url = "mailto:campbell@stats.ox.ac.uk"
+url = "mailto:andrew.campbell.ml@outlook.com"
 
 [[params.social]]
 name = "googlescholar"

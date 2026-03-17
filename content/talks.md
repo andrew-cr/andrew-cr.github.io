@@ -6,7 +6,6 @@ readTime: false
 autonumber: false
 math: false
 showTags: false
-hideBackToTop: false
 fediverse: ""
 hidePagination: true
 hideBackToTop: true

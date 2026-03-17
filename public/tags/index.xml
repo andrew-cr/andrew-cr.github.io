@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Andrew Campbell</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Autoencoder</title>
+      <link>http://localhost:1313/tags/autoencoder/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/autoencoder/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cifar10</title>
+      <link>http://localhost:1313/tags/cifar10/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/cifar10/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Latent Diffusion Model</title>
+      <link>http://localhost:1313/tags/latent-diffusion-model/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/latent-diffusion-model/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LDM</title>
+      <link>http://localhost:1313/tags/ldm/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ldm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open Source</title>
+      <link>http://localhost:1313/tags/open-source/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vae</title>
+      <link>http://localhost:1313/tags/vae/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/vae/</guid>
+      <description></description>
+    </item>
     <item>
       <title>CTMC</title>
       <link>http://localhost:1313/tags/ctmc/</link>

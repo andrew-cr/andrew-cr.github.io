@@ -52,7 +52,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.c98651b6338e6b5dbfdb7a50041f35a692b0a65d9529080d30143fba36ba1f73.css" media="all">
+<link rel="stylesheet" href="/assets/combined.min.08f53018ba8efe89c67121d987a233a8b0c2d25bcf15e79af305b06225900e45.css" media="all">
 
 
 
@@ -205,6 +205,8 @@
 </figure>
 </p>
 <p>A path of a CTMC is a single trajectory from time \(0\) to time \(t\). The trajectory is a function \(\omega : s \in [0, t] \mapsto \omega_s \in \{1, \dots , S \}\) that is everywhere right continuous and has left limits everywhere (also known as càdlàg paths). Intuitively, it is a function that takes in a time variable and outputs the position of the particle following the trajectory at that time. The càdlàg condition in our case states that at jump time \(\tau\) we have \(\omega_\tau\) taking the new jumped to value and \(\omega_{\tau}^- := \lim_{s \uparrow \tau} \omega_s\) being the previous value before the jump.</p>
+<p>A trajectory drawn from the CTMC, \(W\), can be fully described through its jump times, \(T_1, \dots T_n\) and its state values between jumps, \(W_0, W_1, \dots, W_{T_n}\) where at jump time \(T_k\) the CTMC jumps from state value \(W_{k-1}\) to value \(W_k\). A path space measure \(\mathbb{P}\) is able to assign probabilities to a drawn trajectory \(W\) from time \(0\) to \(t\) in the sense of
+</p>
 \[
 \begin{aligned}
     \mathbb{P}(W \in \mathrm{d} \omega) := \mathbb{P} \left( W_0 \in \mathrm{d} \omega_{0}, (T_1, W_{T_1}) \in \mathrm{d} (t_1, \omega_{t_1}), \dots (T_n, W_{T_n}) \in \mathrm{d} (t_n, \omega_{t_n}), T_{n+1} \geq t \right)

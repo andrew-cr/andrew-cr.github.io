@@ -26,6 +26,10 @@ hideHeader = false
 homeIntroTitle = 'Bio'
 homeIntroContent = """
 
+I am a research scientist at Google DeepMind.
+
+Prior to this I was an AI Scientist at Xaira Therapeutics where I worked on generative models for antibody design.
+
 I completed my PhD in 2025 in the Department of Statistics at the University of Oxford. My supervisors were Arnaud Doucet and Tom Rainforth.
 
 During my PhD, I worked on expanding the denoising diffusion methodology to a wider range of data types including discrete data and transdimensional data. I applied these methods to scientific data including molecules and proteins.
